@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Greet me</h1>
+
+    <form action="/hello" method="post" >
+        <input type="text" name="username">
+        <input type="submit" >
+    </form>
+
+    {{greeting}}
+
+<!--    <form action="/greeted" method="post">-->
+<!--        <a href="/greeted">Greeted Names</a>-->
+<!--    </form>-->
+    <br><br>
+    <form action="hello" method="post">
+        <h3 style="color: blue">Greeted Names </h3>
+    </form>
+    <div>
+        <ul>
+            {{#each users}}
+                <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+</body>
+</html>
