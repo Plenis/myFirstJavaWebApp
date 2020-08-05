@@ -8,12 +8,22 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Greet me</h1>
-
+    <h1>Greet Me</h1>
+    <h3>Please enter a name: </h3>
     <form action="/hello" method="post" >
         <input type="text" name="username">
         <input type="submit" >
+
+    <div>
+        <h3>
+            Please select a language:
+        </h3>
+        <input type="radio" name="language" value="English"> English
+        <input type="radio" name="language" value="IsiXhosa"> IsiXhosa
+        <input type="radio" name="language" value="Afrikaans"> Afrikaans
+    </div>
     </form>
+    <br>
 
     {{greeting}}
 
@@ -22,8 +32,7 @@
 <!--    </form>-->
     <br><br>
     <form action="hello" method="post">
-        <h3 style="color: blue">Greeted Name</h3>
-<!--        <a href="hello/greeted">Greeted Names</a>-->
+        <h3 style="color: blue">Greeted Names </h3>
     </form>
     <div>
         <ul>
@@ -32,5 +41,8 @@
             {{/each}}
         </ul>
     </div>
+
+    <h3 style="color: red">Counter: </h3> {{counter}}
+
 </body>
 </html>
