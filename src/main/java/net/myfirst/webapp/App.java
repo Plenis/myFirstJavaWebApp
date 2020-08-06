@@ -54,7 +54,7 @@ public class App {
 
             }, new HandlebarsTemplateEngine());
 
-//            get("/greeted/:username", (request, response) -> new ModelAndView(map, "greeted.handlebars"), new HandlebarsTemplateEngine());
+            get("/greeted/:username", (request, response) -> new ModelAndView(map, "greeted.handlebars"), new HandlebarsTemplateEngine());
 //
 //            post("/greeted/:username", (request, response) -> {
 //                String username = request.queryParams("username");
