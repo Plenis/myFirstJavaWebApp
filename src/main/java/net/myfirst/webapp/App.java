@@ -54,6 +54,24 @@ public class App {
 
             }, new HandlebarsTemplateEngine());
 
+//            get("/greeted/:username", (request, response) -> new ModelAndView(map, "greeted.handlebars"), new HandlebarsTemplateEngine());
+//
+//            post("/greeted/:username", (request, response) -> {
+//                String username = request.queryParams("username");
+////               String uniqueCounter = request.queryParams("uniqueCounter");
+//
+//                int uniqueCounter = 0;
+//
+//                if(map.isEmpty()){
+//                    new ModelAndView("greeting", "Name not available!");
+//                }
+//                else if(map.containsKey(username)){
+//                    uniqueCounter = (int) map.get(username);
+//                }
+//                map.put("username", username);
+//                map.put("uniqueCounter", uniqueCounter);
+//                return new ModelAndView(map, "greeted.handlebars");
+//            }, new HandlebarsTemplateEngine());
         }
 
     static int getHerokuAssignedPort() {
