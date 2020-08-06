@@ -27,22 +27,20 @@
 
     {{greeting}}
 
-<!--    <form action="/greeted" method="post">-->
-<!--        <a href="/greeted">Greeted Names</a>-->
-<!--    </form>-->
     <br><br>
     <form action="hello" method="post">
-        <h3 style="color: blue">Greeted Names </h3>
+      <h3 style="color: blue">Greeted Names </h3>
     </form>
     <div>
         <ul>
             {{#each users}}
-                <li>{{this}}</li>
+            <a href="/greeted/:username"> <li>{{this}}</li></a>
             {{/each}}
         </ul>
     </div>
 
     <h3 style="color: red">Counter: </h3> {{counter}}
+    <br>
 
 </body>
 </html>
