@@ -5,15 +5,17 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Greet Me</title>
 </head>
-<body>
+<body class="body" >
     <h1>Greet Me</h1>
     <h3>Please enter a name: </h3>
     <form action="/hello" method="post" >
-        <input type="text" name="username">
+        <input type="text" name="username" placeholder="What's your name?">
         <input type="submit" >
-
+<br><br>
     <div>
         <h3>
             Please select a language:
@@ -25,7 +27,11 @@
     </form>
     <br>
 
-    {{greeting}}
+  <div style="color: green"> {{greeting}} </div>
+
+    <br><br>
+    <h3 style="color: red">Counter: </h3> {{counter}}
+    <br>
 
     <br><br>
     <form action="hello" method="post">
@@ -34,13 +40,9 @@
     <div>
         <ul>
             {{#each users}}
-            <a href="/greeted/:username"> <li>{{this}}</li></a>
+            <a href="/greeted/:username" name="user"> <li>{{this}}</li></a>
             {{/each}}
         </ul>
     </div>
-
-    <h3 style="color: red">Counter: </h3> {{counter}}
-    <br>
-
 </body>
 </html>
