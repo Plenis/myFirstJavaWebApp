@@ -86,23 +86,20 @@ public class App {
             String greeting = greet.get();
             int counter = users.size();
 
-            int uniqueCounter = 0;
-
             // put it in the map which is passed to the template - the value will be merged into the template
             map.put("greeting", greeting);
             map.put("users", users);
             map.put("counter", counter);
-            map.put("username", user);
-            map.put("uniqueCounter", uniqueCounter);
+
             return new ModelAndView(map, "hello.handlebars");
 
         }, new HandlebarsTemplateEngine());
 
-        get("/greeted/:username", (request, response) -> {
-            Map<String, Object> map = new HashMap<>();
-
-            return new ModelAndView(map, "greeted.handlebars");
-        }, new HandlebarsTemplateEngine());
+//        get("/greeted/:username", (request, response) -> {
+//            Map<String, Object> map = new HashMap<>();
+//
+//            return new ModelAndView(map, "greeted.handlebars");
+//        }, new HandlebarsTemplateEngine());
 
 //            post("/greeted/:username", (request, response) -> {
 //                String username = request.queryParams("username");
